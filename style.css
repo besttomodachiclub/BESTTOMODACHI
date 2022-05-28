@@ -65,15 +65,12 @@ body{
     background: #e56739;
     box-shadow: 0px 0px 10px 2px #f7c77f;
     border-radius: 10px;
-    padding: 0px 5px 0px 5px;
 }
 
 .set_place a:hover{
     background: #e3f261;
     box-shadow: 0px 0px 10px 2px #f7faa9;
     border-radius: 10px;
-    padding-left: 5px;
-    padding-right: 5px;
 }
 
 .enter_next{
@@ -97,7 +94,9 @@ body{
     animation: float infinite ease-in 1000ms;
 }
 
-
+.icons i{
+    padding: 5px;
+}
 
 .enter_next_position{
     position: absolute;

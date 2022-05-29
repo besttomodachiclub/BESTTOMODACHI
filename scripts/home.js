@@ -32,4 +32,9 @@ window.addEventListener("scroll", function(){ // or window.addEventListener("scr
    lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
 }, false);
 
-
+let progress = document.getElementById('progressbar');
+let totalheight = document.body.scrollHeight - window.innerHeight;
+window.onscroll = function(){
+    let progress_hi = (window.pageYOffset  / totalheight) * 100;
+    progress.style.height = progress_hi + '%';
+}

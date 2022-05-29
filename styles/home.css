@@ -35,24 +35,58 @@ body{
 
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
-    border-radius: 10px;
-    background: #ffd2fa
+    width: 0px;
 }
 
-  
-  /* Track */
-::-webkit-scrollbar-track{
-    margin-block: .5rem;
+#scrollbar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    background: #011136;
 }
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: linear-gradient(490deg, #08b3da, rgb(169, 3, 91));
-    border-radius: 10px;
-  }
-::-webkit-scrollbar-thumb:hover{
-      background: linear-gradient(490deg, #1be600, rgb(169, 3, 91));
-  }
+
+#progressbar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    background: linear-gradient(to top , #33ff18 , #2063ff);
+    animation: animate 5s infinite linear;
+}
+
+#progressbar ::before{
+    content:  '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top , #33ff18 , #2063ff) ;
+    filter: blur(30px);
+}
+#progressbar ::after{
+    content:  '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top , #33ff18 , #2063ff) ;
+    filter: blur(30px);
+}
+
+@keyframes animate 
+{
+    0%,100%{
+        filter: hue-rotate(0deg);
+    }
+    50%{
+        filter: hue-rotate(360deg);
+    }
+}
+
 .navbar{
     padding: 20px;
     display: flex;

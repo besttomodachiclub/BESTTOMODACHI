@@ -30,7 +30,10 @@ body{
     font-family: 'rocher';
     text-shadow: 0 0 1px #fff, 0 0 7px #fff, 0 0 5px #00bce6, 0 0 14px #00bce6, 0 0 5px #00bce6, 0 0 33px #00bce6, 0 0 22px #00bce6 !important; 
   }
-  
+
+#media_box img{
+    width: 50px;
+}
 
 
 /* width */
@@ -236,6 +239,11 @@ body{
 .fair_distri{
     margin-left: 11vw;
     display: flex;
+    gap: 10px;
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
 .fair_head{
@@ -433,10 +441,12 @@ body{
 }
 
 .link2:hover{
-    background: #030a19;
+    background: #3273ff;
     color: #fff;
     border-radius: 10px;
 }
+
+
 
 .social_media_pos{
     display: flex;
@@ -450,10 +460,8 @@ body{
     top: 40%;
     margin-left: 10px;
     font-size: 20px;
-    background-color: rgb(203, 203, 5);
     position: fixed;
     text-align: center;
-    box-shadow: 0px 0px 10px 2px rgb(203, 203, 5);
     animation: wave infinite ease-in-out 2000ms;
 }
 
@@ -469,9 +477,9 @@ body{
     }
 }
 
-.social_media_box:hover{
-    animation: none;
-}
+
+
+
 
 .line{
     width:  80vw;
@@ -536,6 +544,9 @@ body{
     .intro_desc,.fair_text,.special_text{
         font-size: 15px !important;
         padding: 10px;
+    }
+    .buy_box img{
+        width: 40vw;
     }
     .specs_text
     {

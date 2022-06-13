@@ -29,7 +29,7 @@ body{
     color: #fff;
     font-family: 'rocher';
     text-shadow: 0 0 1px #fff, 0 0 7px #fff, 0 0 5px #00bce6, 0 0 14px #00bce6, 0 0 5px #00bce6, 0 0 33px #00bce6, 0 0 22px #00bce6 !important; 
-  }
+}
 
 #media_box img{
     width: 50px;
@@ -45,7 +45,7 @@ body{
     position: fixed;
     top: 0;
     right: 0;
-    width: 10px;
+    width: 5px;
     height: 100%;
     background: #011136;
 }
@@ -54,7 +54,7 @@ body{
     position: fixed;
     top: 0;
     right: 0;
-    width: 10px;
+    width: 5px;
     background: linear-gradient(to top , #33ff18 , #2063ff);
     animation: animate 5s infinite linear;
 }
@@ -93,9 +93,11 @@ body{
 .navbar{
     padding: 20px;
     display: flex;
+    top: -90px;
     width: 100%;
     align-items: center;
     justify-content: space-between;
+    transition: ease-in 5ms;
 }
 
 
@@ -145,6 +147,7 @@ body{
 .nav_fixed{
     background: linear-gradient(150deg , rgb(99, 1, 81),#011136 ) ;
     position: fixed;
+    top: 0px;
     box-shadow: 0px 0px 10px 2px rgb(0,0,0);
     z-index: 10000;
     transition: ease-in 400ms;
@@ -432,8 +435,76 @@ body{
     color: rgb(0, 0, 0);
 }
 
+.faq{
+    margin-top: 10px;
+    margin-left: 11em;
+    display: flex;
+    gap: 10px;
+    color: rgb(255, 255, 255);
+    flex-direction: column;
+}
+
+.question{
+    display: flex;
+    font-size: 20px;
+    margin-right: 11vw;
+    align-items: center;
+    flex-direction: row;
+    padding: 15px;
+    border-radius: 15px;
+    justify-content: space-between;
+    border: solid thin rgb(0, 0, 0);
+    background:  #ed0d6edd;
+}
+.question:hover{
+    box-shadow:  0px 0px 3px 2px #00bce6;
+    cursor: pointer;
+}
+
+.answer{
+    text-align: justify;
+    font-size: 17px;
+    margin-right: 11vw;
+    padding: 15px;
+    color: #ffffff;
+    border-radius: 15px;
+    border: solid thin rgb(255 255 255);
+    background: #100345;
+}
+
+
 .deactive{
     display: none;
+}
+
+.active{
+    display: block;
+}
+
+.rotate_90{
+    animation: rotate ease-in 500ms;
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotateY(0);
+    }
+    100%{
+        transform: rotateY(90);
+    }
+}
+
+.fading{
+    animation: faded ease-in  500ms;
+}
+
+@keyframes faded {
+    0%{
+        filter: opacity(0);
+    }
+    100%{
+        filter: opacity(100);
+    }
 }
 
 .link2{
@@ -580,6 +651,7 @@ body{
     .navbar{
         color: rgb(255, 255, 255);
         transition: none;
+        top: 0;
         background: linear-gradient(150deg , rgb(99, 1, 81),#011136 )  !important;
     }
     #nav_repo{
@@ -628,10 +700,18 @@ body{
         width: 90%;
         text-align: justify;
     }
+    .sp_card p{
+        width: 75vw;
+        text-align: center;
+    }
 }
 
 @media (max-width: 500px)
 {
+    .faq{
+        margin-left: 1em;
+        width: 100%;
+    }
     .man_image,.specs_image{
         width: 33vw;
         height: 12rem;
